@@ -1,0 +1,22 @@
+
+  <!-- <button title="Add Contact" id="contactAdd"  mat-stroked-button><mat-icon>add_box</mat-icon></button> -->
+<!-- <mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title> {{firstName}}  {{lastName}}</mat-card-title>
+      <mat-card-subtitle>{{email}}</mat-card-subtitle>
+      <img mat-card-sm-image src= {{avatar}}>
+    </mat-card-title-group>
+    <mat-card-content>
+
+    </mat-card-content>
+  </mat-card>
+   -->
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar  class="round-avatar" >
+        <img mat-card-sm-image src= {{contact.avatar}}>
+      </div>
+      <mat-card-title>{{contact.first_name}}  {{contact.last_name}}</mat-card-title>
+      <mat-icon style="color: red;" class="action-buttons" (click)="deleteContactF()" aria-hidden="false" aria-label="Delete">delete</mat-icon>
+    </mat-card-header>
+  </mat-card>

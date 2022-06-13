@@ -1,0 +1,31 @@
+<div class="contact-book" *ngIf="!addUser; else addUserTemplate">
+    <div class="contact-search">
+        
+        <mat-form-field  appearance="outline">
+            <mat-select (selectionChange)="onSortChange($event)" value="">
+                <mat-option value="">
+                    All 
+              </mat-option>
+                
+              <mat-option value="A-Z">
+                    A-Z
+              </mat-option>
+              <mat-option value="Z-A">
+                    Z-A
+            </mat-option>
+            </mat-select>
+          </mat-form-field> 
+    </div>
+    <div class="contact-list-holder">
+        <div *ngFor="let contact of contactList">
+            <app-singlecontact [contact]="contact"
+             (deleteContact)="deleteSingleContact($event)"></app-singlecontact>
+        </div>
+    </div>
+    <button (click)="addAUser()">Add User</button>
+</div>
+
+
+<ng-template #addUserTemplate>
+    <app-createuser (userAdded)="userAddedEvent()"></app-createuser>
+</ng-template>

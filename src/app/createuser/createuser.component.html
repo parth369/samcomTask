@@ -1,0 +1,27 @@
+<h1>Create New User</h1>
+<form [formGroup]="contactForm">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>First Name </mat-label>
+    <input type="text" matInput formControlName="firstName">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Last Name </mat-label>
+    <input type="text" matInput formControlName="lastName">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" email="true">
+  </mat-form-field>
+  <div>
+    <mat-label>Avatar </mat-label>
+    <button (click)="fileInput.click()">
+      <mat-icon>library_add</mat-icon>
+      <span>Select</span>
+      <input   #fileInput type="file" style="display:none;"   (change)="onFileInput($event)"/>
+    </button>
+</div>
+
+  <button (click)="addDummyUser()">Add User</button>
+</form>

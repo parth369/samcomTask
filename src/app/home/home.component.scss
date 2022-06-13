@@ -1,0 +1,21 @@
+.contact-book{
+    background-color: #40ACD9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-search{
+    display: flex;
+    flex-direction: row;
+    width: 30em;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+    opacity: 0;
+    }
